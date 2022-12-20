@@ -33,3 +33,12 @@
   border: 1px solid black;
   background-color: gray; /* cela ajoutera une bordure de 1 pixel de large en noir à chaque div */
 }
+
+
+/* correction */
+
+/* div {
+    display: inline-block;
+    width: calc(25% -6px)
+} */
+
