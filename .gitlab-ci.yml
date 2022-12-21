@@ -1,0 +1,23 @@
+stages:
+  - build
+  - deploy
+
+build_css:
+  stage: build
+  script:
+    - npm install # Installe les dépendances nécessaires (comme SASS)
+    - npm run build:css # Exécute la commande de compilation de SASS vers CSS
+  artifacts:
+    paths:
+      - dist/css # Ajoute les fichiers CSS compilés à l'artefact de la pipeline
+
+deploy_to_production:
+  stage: deploy
+  script:
+    - gzip -9 dist/css/*.css # Compresse les fichiers CSS avant le déploiement
+    - scp -r dist/css user@your-production-server:/path/to/css # Déploie les fichiers CSS sur votre serveur de production
+  only:
+    - master
+  dependencies:
+    - build_css # Dépend de la tâche de build
+

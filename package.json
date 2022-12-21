@@ -1,0 +1,23 @@
+{
+  "name": "css-maquettes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass src/css/main.scss dist/css/main.css",
+    "build:css:prod": "sass src/css/main.scss dist/css/main.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubisanto/css-maquettes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubisanto/css-maquettes/issues"
+  },
+  "homepage": "https://github.com/rubisanto/css-maquettes#readme"
+}
